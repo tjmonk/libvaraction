@@ -1,4 +1,4 @@
-/*============================================================================
+/*==============================================================================
 MIT License
 
 Copyright (c) 2023 Trevor Monk
@@ -20,20 +20,20 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-============================================================================*/
+==============================================================================*/
 
 #ifndef VARACTION_H
 #define VARACTION_H
 
-/*============================================================================
+/*==============================================================================
         Includes
-============================================================================*/
+==============================================================================*/
 
 #include <varserver/varserver.h>
 
-/*============================================================================
+/*==============================================================================
         Public Definitions
-============================================================================*/
+==============================================================================*/
 
 /*! variable operations */
 typedef enum {
@@ -153,9 +153,9 @@ typedef struct _statement
     struct _statement *pNext;
 } Statement;
 
-/*============================================================================
+/*==============================================================================
         Public Function Declarations
-============================================================================*/
+==============================================================================*/
 
 void InitVarAction( void );
 
@@ -173,8 +173,8 @@ int ProcessIF( VARSERVER_HANDLE hVarServer, Variable *left, Variable *right );
 int ProcessExpr( VARSERVER_HANDLE hVarServer, Variable *pVariable );
 
 
-Variable *CreateDeclaration( int type_specifier, Variable *pVariable );
-Variable *CreateVariable( int op, void *left, void *right );
+Variable *CreateDeclaration( uintptr_t type_specifier, Variable *pVariable );
+Variable *CreateVariable( uintptr_t op, void *left, void *right );
 Variable *NewNumber( void *number );
 Variable *NewString( void *str );
 Variable *NewFloat( void *fstr );

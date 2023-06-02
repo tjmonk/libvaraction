@@ -714,7 +714,7 @@ static int NOP( VARSERVER_HANDLE hVarServer,
 @retval NULL if an error occurred
 
 ==============================================================================*/
-Variable *CreateDeclaration( int type_specifier, Variable *pVariable )
+Variable *CreateDeclaration( uintptr_t type_specifier, Variable *pVariable )
 {
     Variable *result = NULL;
 
@@ -776,7 +776,7 @@ Variable *CreateDeclaration( int type_specifier, Variable *pVariable )
 @retval NULL if an error occurred
 
 ==============================================================================*/
-Variable *CreateVariable( int op, void *left, void *right )
+Variable *CreateVariable( uintptr_t op, void *left, void *right )
 {
     Variable *var = (Variable *)calloc( 1, sizeof( Variable ) );
     if ( var != NULL )
