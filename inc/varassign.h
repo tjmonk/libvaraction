@@ -29,7 +29,7 @@ SOFTWARE.
         Includes
 ============================================================================*/
 
-#include "varaction.h"
+#include <varaction/varaction.h>
 
 /*============================================================================
         Public Function Declarations

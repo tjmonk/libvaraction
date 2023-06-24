@@ -54,7 +54,7 @@ SOFTWARE.
 #include <errno.h>
 #include <ctype.h>
 #include <syslog.h>
-#include "varaction.h"
+#include <varaction/varaction.h>
 #include "varassign.h"
 #include "varbitwise.h"
 #include "varboolean.h"
